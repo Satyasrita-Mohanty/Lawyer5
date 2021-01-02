@@ -163,7 +163,7 @@ nav{
 }
 .logo1{
     background-color: #cf9455;
-    padding: 15px 63px;
+    padding: 15px 54px;
     color: #000000 !important;
     text-align: center;
 }
@@ -276,6 +276,7 @@ nav{
    padding: 20px 0px;
    border-radius: 30px;
    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+   height: 100%;
 }
 .topSection{
    margin-top: -30px; 
@@ -315,6 +316,40 @@ nav{
     margin-right: 22px;
 }
 
+.slideanim {visibility:hidden;}
+.slide {
+  /* The name of the animation */
+  animation-name: slide;
+  -webkit-animation-name: slide;
+  /* The duration of the animation */
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  /* Make the element visible */
+  visibility: visible;
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+  }
+}
+
 
 
 
@@ -323,29 +358,66 @@ nav{
 
 /* Extra small devices (phones, 300px and down)  start*/
 @media only screen and (max-width: 300px) {
-   
+    .logo1{
+        padding: 15px 14px !important;
+    }
     
 }
 
 
 /* Extra small devices (phones, 320px and down)  start */
 @media only screen and (max-width: 320px) {
-
+    .logo1{
+        padding: 15px 33px;
+    }
 
 }
 
 
 /* Medium devices ( 767px and down) start */
 @media only screen and (max-width: 767px){ 
-
-    
+    .carousel-caption{
+        display: none;
+    }
+    .carousel-inner img{
+        height: auto;
+    }
+    .blogImg1{
+        height: auto; 
+    }
+    .blogImg{
+       height: auto;
+    }
+    .serviceHead{
+        font-size: 27px;
+    }
+    .serviceHeadSmall{
+       font-size: 19px; 
+    }
+    .Heading1{
+       font-size: 14px; 
+    }
+    .mobileView{
+        margin-top: -60px;
+    }
 }
 
 
 
 /* Medium devices (landscape tablets, 768px and up)  start*/
 @media only screen and (min-width: 768px) {
-  
+  .carousel-caption{
+     bottom: 64px;
+    }
+    .bigHeading{
+        font-size: 32px;
+    }
+    .smallHeading{
+       font-size: 14px;  
+    }
+    .logo1{
+       padding: 15px 233px;
+    }
     
 }
     
@@ -355,6 +427,12 @@ nav{
     .navLink{
       padding: 0px 7px;     
     } 
+    .sideImg{
+        height: 100%;
+    }
+    .mapImg{
+         height: 100%; 
+    }
 }
 
 
@@ -364,6 +442,21 @@ nav{
 .navLink{
     padding: 0px 7px;     
   }
+   .carousel-caption{
+     bottom: 45px;
+    }
+     .bigHeading{
+        font-size: 38px;
+    }
+    .smallHeading{
+       font-size: 15px;  
+    }
+    .logo1{
+       padding: 15px 35px;
+    }
+     .sideImg{
+        height: 576px;
+    }
     
 }
 
@@ -374,4 +467,22 @@ nav{
 .navLink{
     padding: 0px 14px;     
   }
+  .carousel-caption{
+     bottom: 100px;
+    }
+    .bigHeading{
+        font-size: 42px;
+    }
+    .smallHeading{
+       font-size: 15px !important;  
+    }
+    .logo1{
+       padding: 15px 63px;
+    }
+    .sideImg{
+        height: 582px;
+    }
+   
+        
 }
+
